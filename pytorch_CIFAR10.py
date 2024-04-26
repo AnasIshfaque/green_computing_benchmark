@@ -1,7 +1,7 @@
 # Computer vision using pytorch
 import torch
 from torch import nn
-
+import torch.nn.functional as F
 import torchvision
 from torchvision import datasets
 from torchvision import transforms
