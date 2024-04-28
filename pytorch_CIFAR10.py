@@ -100,7 +100,7 @@ def train_step(model: torch.nn.Module,
     model.train()
     for batch, (X, y) in enumerate(data_loader):
         # Put data in target device
-        X, y = X.to(device), y.to(device)
+        X, y = X.to(device), y.clone().detach().long().to(device)
         # 1. Forward pass
         y_pred = model(X)
 
