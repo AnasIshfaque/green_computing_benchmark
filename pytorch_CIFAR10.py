@@ -120,9 +120,10 @@ def train_step(model: torch.nn.Module,
         X, y = X.to(device), y.clone().detach().long().to(device)
         # 1. Forward pass
         y_pred = model(X)
-
+        print(f"forward pass done for batch {batch}")
         # 2. Calculate loss (per batch)
         loss = loss_fn(y_pred, y)
+        print(f"loss calculated for batch {batch}")
         train_loss += loss # accumulate train loss
         train_acc += accuracy_fn(y_true=y,
                                  y_pred=y_pred.argmax(dim=1))
