@@ -8,11 +8,25 @@ from torchvision import transforms
 from torch.utils.data import DataLoader
 from timeit import default_timer as timer
 import torchmetrics.classification as mtr
+
+import time
+import subprocess
+import os
+import signal
+from datetime import datetime
+
 # Import matplotlib for visualization
 # import matplotlib.pyplot as plt
 
 # Import tqdm for progress bar
 from tqdm.auto import tqdm
+
+subprocess.Popen(["./check_device.sh"])
+time.sleep(10)
+
+start_time = datetime.now()
+start_time = start_time.strftime("%H:%M:%S")
+print("Main code exe started at ", start_time)
 
 device = 'cpu'
 
@@ -226,3 +240,20 @@ train_time_end = timer()
 total_train_time_model = print_train_time(start=train_time_start,
                                             end=train_time_end,
                                             device=device)
+
+end_time = datetime.now()
+end_time = end_time.strftime("%H:%M:%S")
+print("Main code exe ends at ", end_time)
+time.sleep(10)
+# Find the process ID (PID) of the bash script
+
+pid_command = "pgrep -f '/bin/bash ./check_device.sh'"
+pid_process = subprocess.Popen(pid_command, shell=True, stdout=subprocess.PIPE)
+pid_output, _ = pid_process.communicate()
+bash_pids = pid_output.decode().strip().split('\n')
+
+if bash_pids:
+    os.kill(int(bash_pids[0]), signal.SIGTERM)
+    print(f"Bash script with PID {pid} terminated successfully.")
+else:
+    print("Bash script is not running.")
