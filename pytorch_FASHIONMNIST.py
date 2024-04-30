@@ -29,7 +29,7 @@ torch.manual_seed(42)
 device = 'cpu'
 
 train_data = datasets.FashionMNIST(
-    root="data", # where to download data to?
+    root="../datasets/data", # where to download data to?
     train=True, # do we want the training dataset?
     download=True, # do we want to download yes/no?
     transform=transforms.ToTensor(), # how do we want to transform the data?
@@ -37,7 +37,7 @@ train_data = datasets.FashionMNIST(
 )
 
 test_data = datasets.FashionMNIST(
-    root="data",
+    root="../datasets/data",
     train=False,
     download=True,
     transform=transforms.ToTensor(),
