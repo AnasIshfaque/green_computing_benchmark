@@ -7,6 +7,7 @@ from torchvision import datasets
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from timeit import default_timer as timer
+import torchmetrics.classification as mtr
 # Import matplotlib for visualization
 # import matplotlib.pyplot as plt
 
@@ -43,6 +44,8 @@ test_data = datasets.CIFAR10(
     download=True,
     transform=transform
 )
+
+class_names = train_data.classes
 
 # Setup the batch size hyperparameter
 BATCH_SIZE = 4
@@ -130,8 +133,9 @@ def test_step(model: torch.nn.Module,
                accuracy_fn,
                device: torch.device = device):
     """Performs a testing loop step on model going over data_loader."""
-
+    
     # initialize metric
+
     acc_metric = mtr.Accuracy(task="multiclass", num_classes=len(class_names))
     precision_metric = mtr.Precision(task="multiclass", average='macro', num_classes=len(class_names))
     recall_metric = mtr.Recall(task="multiclass", average='macro', num_classes=len(class_names))

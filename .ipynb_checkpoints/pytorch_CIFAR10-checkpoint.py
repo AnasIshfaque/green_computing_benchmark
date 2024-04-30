@@ -7,6 +7,7 @@ from torchvision import datasets
 from torchvision import transforms
 from torch.utils.data import DataLoader
 from timeit import default_timer as timer
+import torchmetrics.classification as mtr
 # Import matplotlib for visualization
 # import matplotlib.pyplot as plt
 
@@ -15,45 +16,50 @@ from tqdm.auto import tqdm
 
 device = 'cpu'
 
-transform_train = transforms.Compose([
-    transforms.RandomCrop(32, padding=4),
-    transforms.RandomHorizontalFlip(),
-    transforms.ToTensor(),
-    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
-])
+# transform_train = transforms.Compose([
+#     transforms.RandomCrop(32, padding=4),
+#     transforms.RandomHorizontalFlip(),
+#     transforms.ToTensor(),
+#     transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
+# ])
 
-transform_test = transforms.Compose([
-    transforms.ToTensor(),
-    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
-])
+# transform_test = transforms.Compose([
+#     transforms.ToTensor(),
+#     transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)),
+# ])
+
+transform = transforms.Compose([transforms.ToTensor(), 
+                                transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2470, 0.2435, 0.2616))])
 
 train_data = datasets.CIFAR10(
     root="../datasets/data", # where to download data to?
     train=True, # do we want the training dataset?
     download=True, # do we want to download yes/no?
-    transform=transform_train, # how do we want to transform the data?
-    target_transform=None # how do we want to transform the labels/targets?
+    transform=transform # how do we want to transform the data?
 )
 
 test_data = datasets.CIFAR10(
     root="../datasets/data",
     train=False,
     download=True,
-    transform=transform_test,
-    target_transform=None
+    transform=transform
 )
 
+class_names = train_data.classes
+
 # Setup the batch size hyperparameter
-BATCH_SIZE = 32
+BATCH_SIZE = 4
 
 # Turn datasets into iterables (batches)
 train_dataloader = DataLoader(dataset=train_data,
                               batch_size=BATCH_SIZE,
-                              shuffle=True)
+                              shuffle=True,
+                              num_workers=2)
 
 test_dataloader = DataLoader(dataset=test_data,
                              batch_size=BATCH_SIZE,
-                             shuffle=False)
+                             shuffle=False,
+                             num_workers=2)
 
 
 # model architechture
@@ -97,7 +103,7 @@ def train_step(model: torch.nn.Module,
     model.train()
     for batch, (X, y) in enumerate(data_loader):
         # Put data in target device
-        X, y = X.to(device), y.to(device)
+        X, y = X.to(device), y.clone().detach().long().to(device)
         # 1. Forward pass
         y_pred = model(X)
 
@@ -127,8 +133,9 @@ def test_step(model: torch.nn.Module,
                accuracy_fn,
                device: torch.device = device):
     """Performs a testing loop step on model going over data_loader."""
-
+    
     # initialize metric
+
     acc_metric = mtr.Accuracy(task="multiclass", num_classes=len(class_names))
     precision_metric = mtr.Precision(task="multiclass", average='macro', num_classes=len(class_names))
     recall_metric = mtr.Recall(task="multiclass", average='macro', num_classes=len(class_names))
@@ -195,7 +202,7 @@ torch.cuda.manual_seed(42)
 model_1 = ConvNet().to(device)
 
 loss_fn = nn.CrossEntropyLoss()
-optimizer = torch.optim.SGD(params=model_1.parameters(), lr= 0.1)
+optimizer = torch.optim.SGD(params=model_1.parameters(), lr= 0.01)
 
 epochs = 25
 
