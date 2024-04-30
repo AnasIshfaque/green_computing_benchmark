@@ -49,20 +49,20 @@ train_data = datasets.CIFAR10(
     root="../datasets/data", # where to download data to?
     train=True, # do we want the training dataset?
     download=True, # do we want to download yes/no?
-    transform=transform # how do we want to transform the data?
+    transform=transforms.ToTensor() # how do we want to transform the data?
 )
 
 test_data = datasets.CIFAR10(
     root="../datasets/data",
     train=False,
     download=True,
-    transform=transform
+    transform=transforms.ToTensor()
 )
 
 class_names = train_data.classes
 
 # Setup the batch size hyperparameter
-BATCH_SIZE = 4
+BATCH_SIZE = 16
 
 # Turn datasets into iterables (batches)
 train_dataloader = DataLoader(dataset=train_data,
@@ -120,7 +120,6 @@ def train_step(model: torch.nn.Module,
         X, y = X.to(device), y.clone().detach().long().to(device)
         # 1. Forward pass
         y_pred = model(X)
-        print(f"forward pass done for batch {batch}")
         # 2. Calculate loss (per batch)
         loss = loss_fn(y_pred, y)
         print(f"loss calculated for batch {batch}")
