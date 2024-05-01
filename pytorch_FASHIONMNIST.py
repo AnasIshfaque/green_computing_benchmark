@@ -9,7 +9,7 @@ from torch.utils.data import DataLoader
 from timeit import default_timer as timer
 import torchmetrics.classification as mtr
 from pathlib import Path
-
+from collections import OrderedDict
 import time
 import subprocess
 import os
@@ -131,6 +131,7 @@ def test_step(model: torch.nn.Module,
     f1_score_metric = mtr.F1Score(task="multiclass", average='macro', num_classes=len(class_names))
     
     global best_acc
+    global best_wts
     test_loss, test_acc = 0, 0
     model.eval()
     with torch.inference_mode():
@@ -247,7 +248,7 @@ optimizer = torch.optim.SGD(params=model.parameters(), lr= 0.1)
 
 epochs = 10
 best_acc = 0.0
-
+best_wts = OrderedDict()
 train_time_start = timer()
 
 for epoch in tqdm(range(epochs)):
@@ -292,6 +293,6 @@ bash_pids = pid_output.decode().strip().split('\n')
 
 if bash_pids:
     os.kill(int(bash_pids[0]), signal.SIGTERM)
-    print(f"Bash script with PID {pid} terminated successfully.")
+    # print(f"Bash script with PID {pid} terminated successfully.")
 else:
     print("Bash script is not running.")
