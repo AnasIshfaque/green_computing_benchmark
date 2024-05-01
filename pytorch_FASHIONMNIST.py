@@ -129,7 +129,8 @@ def test_step(model: torch.nn.Module,
     precision_metric = mtr.Precision(task="multiclass", average='macro', num_classes=len(class_names))
     recall_metric = mtr.Recall(task="multiclass", average='macro', num_classes=len(class_names))
     f1_score_metric = mtr.F1Score(task="multiclass", average='macro', num_classes=len(class_names))
-
+    
+    global best_acc
     test_loss, test_acc = 0, 0
     model.eval()
     with torch.inference_mode():
