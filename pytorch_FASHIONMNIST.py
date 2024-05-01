@@ -14,6 +14,7 @@ import time
 import subprocess
 import os
 import signal
+import copy
 from datetime import datetime
 
 # Import tqdm for progress bar
@@ -155,7 +156,7 @@ def test_step(model: torch.nn.Module,
         test_acc /= len(data_loader)
         if test_acc > best_acc:
             best_acc = test_acc
-            best_wts = model.state_dict()
+            best_wts = copy.deepcopy(model.state_dict())
         # metric on all batches using custom accumulation
         acc = acc_metric.compute()
         print(f"Accuracy on all data: {acc}")
@@ -278,7 +279,7 @@ MODEL_SAVE_PATH = MODEL_PATH / MODEL_NAME
 
 # 3. Save the model state dict
 print(f"Saving model to: {MODEL_SAVE_PATH}")
-torch.save(obj=model.state_dict(),
+torch.save(obj=best_wts,
            f=MODEL_SAVE_PATH)
 
 
