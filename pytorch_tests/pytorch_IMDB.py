@@ -15,6 +15,7 @@ import os
 import signal
 import copy
 from datetime import datetime
+from pathlib import Path
 
 subprocess.Popen(["../check_device.sh"])
 
@@ -264,10 +265,20 @@ def get_accuracy(prediction, label):
     accuracy = correct_predictions / batch_size
     return accuracy
 
+def print_train_time(start: float,
+                     end: float,
+                     device: torch.device = None):
+    """Prints difference between start and end time."""
+    total_time = end - start
+    print(f"Train time on {device}: {total_time:.3f} seconds")
+    return total_time
+
 n_epochs = 10
 best_valid_loss = float("inf")
 
 metrics = collections.defaultdict(list)
+
+train_time_start = timer()
 
 for epoch in range(n_epochs):
     train_loss, train_acc = train(
@@ -280,11 +291,27 @@ for epoch in range(n_epochs):
     metrics["valid_accs"].append(valid_acc)
     if valid_loss < best_valid_loss:
         best_valid_loss = valid_loss
-        torch.save(model.state_dict(), "cnn.pt")
+        # 1. Create models directory
+        MODEL_PATH = Path("../models")
+        MODEL_PATH.mkdir(parents=True, exist_ok=True)
+
+        # 2. Create model save path
+        MODEL_NAME = "IMDB_pytorch_model.pth"
+        MODEL_SAVE_PATH = MODEL_PATH / MODEL_NAME
+
+        # 3. Save the model state dict
+        print(f"Saving model to: {MODEL_SAVE_PATH}")
+        torch.save(obj=model.state_dict(),
+                f=MODEL_SAVE_PATH)
+        # torch.save(model.state_dict(), "cnn.pt")
     print(f"epoch: {epoch}")
     print(f"train_loss: {train_loss:.3f}, train_acc: {train_acc:.3f}")
     print(f"valid_loss: {valid_loss:.3f}, valid_acc: {valid_acc:.3f}")
 
+train_time_end = timer()
+total_train_time_model = print_train_time(start=train_time_start,
+                                            end=train_time_end,
+                                            device=device)
 # Find the process ID (PID) of the bash script
 pid_command = "pgrep -f '/bin/bash ../check_device.sh'"
 pid_process = subprocess.Popen(pid_command, shell=True, stdout=subprocess.PIPE)
