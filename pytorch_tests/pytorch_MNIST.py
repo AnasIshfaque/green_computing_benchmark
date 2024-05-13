@@ -48,7 +48,7 @@ test_data = datasets.MNIST(
 class_names = train_data.classes
 
 # Setup the batch size hyperparameter
-BATCH_SIZE = 32
+BATCH_SIZE = 4
 
 # Turn datasets into iterables (batches)
 train_dataloader = DataLoader(dataset=train_data,
