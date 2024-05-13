@@ -20,7 +20,7 @@ from datetime import datetime
 # Import tqdm for progress bar
 from tqdm.auto import tqdm
 
-subprocess.Popen(["./check_device.sh"])
+subprocess.Popen(["../check_device.sh"])
 
 start_time = datetime.now()
 start_time = start_time.strftime("%H:%M:%S")

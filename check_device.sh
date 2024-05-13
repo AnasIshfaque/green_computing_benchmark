@@ -50,9 +50,9 @@ remove_temp_file() {
 append_metrics_to_csv() {
     timestamp=$(date "+%Y-%m-%d %H:%M:%S")
     cpu_usage=$(get_cpu_usage)
-	top_cpu=$(get_top_cpu_usage)
+	# top_cpu=$(get_top_cpu_usage)
     ram_usage=$(get_ram_usage)
-	vcgencmd_ram_use=$(get_vcgencmd_ram)
+	# vcgencmd_ram_use=$(get_vcgencmd_ram)
     cpu_temperature=$(get_cpu_temperature)
     power_draw=$(get_power_draw)
     
