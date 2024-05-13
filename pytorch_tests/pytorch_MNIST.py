@@ -20,7 +20,7 @@ from datetime import datetime
 # Import tqdm for progress bar
 from tqdm.auto import tqdm
 
-subprocess.Popen(["./check_device.sh"])
+subprocess.Popen(["../check_device.sh"])
 
 start_time = datetime.now()
 start_time = start_time.strftime("%H:%M:%S")
@@ -30,7 +30,7 @@ torch.manual_seed(42)
 device = 'cpu'
 
 train_data = datasets.MNIST(
-    root="../datasets/data", # where to download data to?
+    root="../../datasets/data", # where to download data to?
     train=True, # do we want the training dataset?
     download=True, # do we want to download yes/no?
     transform=transforms.ToTensor(), # how do we want to transform the data?
@@ -38,7 +38,7 @@ train_data = datasets.MNIST(
 )
 
 test_data = datasets.MNIST(
-    root="../datasets/data",
+    root="../../datasets/data",
     train=False,
     download=True,
     transform=transforms.ToTensor(),
@@ -272,11 +272,11 @@ total_train_time_model = print_train_time(start=train_time_start,
 
 
 # 1. Create models directory
-MODEL_PATH = Path("models")
+MODEL_PATH = Path("../models")
 MODEL_PATH.mkdir(parents=True, exist_ok=True)
 
 # 2. Create model save path
-MODEL_NAME = "fashioNMNIST_model.pth"
+MODEL_NAME = "pytorch_MNIST_model.pth"
 MODEL_SAVE_PATH = MODEL_PATH / MODEL_NAME
 
 # 3. Save the model state dict
@@ -286,7 +286,7 @@ torch.save(obj=best_wts,
 
 
 # Find the process ID (PID) of the bash script
-pid_command = "pgrep -f '/bin/bash ./check_device.sh'"
+pid_command = "pgrep -f '/bin/bash ../check_device.sh'"
 pid_process = subprocess.Popen(pid_command, shell=True, stdout=subprocess.PIPE)
 pid_output, _ = pid_process.communicate()
 bash_pids = pid_output.decode().strip().split('\n')
