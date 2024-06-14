@@ -29,11 +29,16 @@ print("Main code exe started at ", start_time)
 torch.manual_seed(42)
 device = 'cpu'
 
+data_transforms =transforms.Compose([
+      transforms.ToTensor(),
+      transforms.Normalize(0.1307,0.3081)
+])
+
 train_data = datasets.MNIST(
     root="../../datasets/data", # where to download data to?
     train=True, # do we want the training dataset?
     download=True, # do we want to download yes/no?
-    transform=transforms.ToTensor(), # how do we want to transform the data?
+    transform=data_transforms, # how do we want to transform the data?
     target_transform=None # how do we want to transform the labels/targets?
 )
 
@@ -41,14 +46,14 @@ test_data = datasets.MNIST(
     root="../../datasets/data",
     train=False,
     download=True,
-    transform=transforms.ToTensor(),
+    transform=data_transforms,
     target_transform=None
 )
 
 class_names = train_data.classes
 
 # Setup the batch size hyperparameter
-BATCH_SIZE = 4
+BATCH_SIZE = 32
 
 # Turn datasets into iterables (batches)
 train_dataloader = DataLoader(dataset=train_data,
