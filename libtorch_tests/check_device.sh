@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CSV_FILE="system_metrics.csv"
+CSV_FILE="metrics.csv"
 
 # Function to get CPU usage
 get_cpu_usage() {
