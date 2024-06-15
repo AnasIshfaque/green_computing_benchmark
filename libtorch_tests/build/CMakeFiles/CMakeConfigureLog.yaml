@@ -1,0 +1,566 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 6.1.21-v8+ - aarch64
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /usr/bin/clang-11 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is Clang, found in:
+        /home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/3.29.3/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/clang++-11 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is Clang, found in:
+        /home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/3.29.3/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-JqojU8"
+      binary: "/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-JqojU8"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-JqojU8'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_534a8
+        [1/2] /usr/bin/clang-11   -v -MD -MT CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -c /home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+        Debian clang version 11.0.1-2
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10
+        Found candidate GCC installation: /usr/lib/gcc/aarch64-linux-gnu/10
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/lib/llvm-11/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=non-leaf -fmath-errno -fno-rounding-math -mconstructor-aliases -target-cpu generic -target-feature +neon -target-abi aapcs -fallow-half-arguments-and-returns -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir /usr/lib/llvm-11/lib/clang/11.0.1 -dependency-file CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-11/lib/clang/11.0.1/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-JqojU8 -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -faddrsig -o CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -x c /home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 11.0.1 based upon LLVM 11.0.1 default target aarch64-unknown-linux-gnu
+        ignoring nonexistent directory "/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/local/include
+         /usr/lib/llvm-11/lib/clang/11.0.1/include
+         /usr/include/aarch64-linux-gnu
+         /usr/include
+        End of search list.
+        [2/2] : && /usr/bin/clang-11  -v -Wl,-v  -rdynamic CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -o cmTC_534a8   && :
+        Debian clang version 11.0.1-2
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10
+        Found candidate GCC installation: /usr/lib/gcc/aarch64-linux-gnu/10
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/usr/bin/ld" -export-dynamic -EL --hash-style=both --build-id --eh-frame-hdr -m aarch64linux -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_534a8 /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crt1.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtbegin.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10 -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../.. -L/usr/lib/llvm-11/bin/../lib -L/lib -L/usr/lib -v CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtend.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Debian) 2.35.2
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:137 (message)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/local/include]
+          add: [/usr/lib/llvm-11/lib/clang/11.0.1/include]
+          add: [/usr/include/aarch64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/lib/llvm-11/lib/clang/11.0.1/include] ==> [/usr/lib/llvm-11/lib/clang/11.0.1/include]
+        collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/local/include;/usr/lib/llvm-11/lib/clang/11.0.1/include;/usr/include/aarch64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-JqojU8']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_534a8]
+        ignore line: [[1/2] /usr/bin/clang-11   -v -MD -MT CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -c /home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [Debian clang version 11.0.1-2]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/lib/llvm-11/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model static -mframe-pointer=non-leaf -fmath-errno -fno-rounding-math -mconstructor-aliases -target-cpu generic -target-feature +neon -target-abi aapcs -fallow-half-arguments-and-returns -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir /usr/lib/llvm-11/lib/clang/11.0.1 -dependency-file CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -sys-header-deps -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-11/lib/clang/11.0.1/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdebug-compilation-dir /home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-JqojU8 -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -faddrsig -o CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -x c /home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 11.0.1 based upon LLVM 11.0.1 default target aarch64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib/llvm-11/lib/clang/11.0.1/include]
+        ignore line: [ /usr/include/aarch64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /usr/bin/clang-11  -v -Wl -v  -rdynamic CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -o cmTC_534a8   && :]
+        ignore line: [Debian clang version 11.0.1-2]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" -export-dynamic -EL --hash-style=both --build-id --eh-frame-hdr -m aarch64linux -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_534a8 /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crt1.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtbegin.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10 -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../.. -L/usr/lib/llvm-11/bin/../lib -L/lib -L/usr/lib -v CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtend.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-EL] ==> ignore
+          arg [--hash-style=both] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [aarch64linux] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_534a8] ==> ignore
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crt1.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crt1.o]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtbegin.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtbegin.o]
+          arg [-L/usr/bin/../lib/gcc/aarch64-linux-gnu/10] ==> dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10]
+          arg [-L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu] ==> dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu]
+          arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
+          arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
+          arg [-L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../..] ==> dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../..]
+          arg [-L/usr/lib/llvm-11/bin/../lib] ==> dir [/usr/lib/llvm-11/bin/../lib]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_534a8.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtend.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtend.o]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o]
+        linker tool for 'C': /usr/bin/ld
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crt1.o] ==> [/usr/lib/aarch64-linux-gnu/crt1.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o] ==> [/usr/lib/aarch64-linux-gnu/crti.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtbegin.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/10/crtbegin.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtend.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/10/crtend.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o] ==> [/usr/lib/aarch64-linux-gnu/crtn.o]
+        collapse library dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10] ==> [/usr/lib/gcc/aarch64-linux-gnu/10]
+        collapse library dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+        collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../..] ==> [/usr/lib]
+        collapse library dir [/usr/lib/llvm-11/bin/../lib] ==> [/usr/lib/llvm-11/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/aarch64-linux-gnu/crt1.o;/usr/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/10/crtbegin.o;/usr/lib/gcc/aarch64-linux-gnu/10/crtend.o;/usr/lib/aarch64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/10;/usr/lib/aarch64-linux-gnu;/lib/aarch64-linux-gnu;/usr/lib;/usr/lib/llvm-11/lib;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the C compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Debian) 2.35.2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:67 (try_compile)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-KD89P9"
+      binary: "/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-KD89P9"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-KD89P9'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_fcb58
+        [1/2] /usr/bin/clang++-11   -v -MD -MT CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -c /home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        Debian clang version 11.0.1-2
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10
+        Found candidate GCC installation: /usr/lib/gcc/aarch64-linux-gnu/10
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         (in-process)
+         "/usr/lib/llvm-11/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=non-leaf -fmath-errno -fno-rounding-math -mconstructor-aliases -target-cpu generic -target-feature +neon -target-abi aapcs -fallow-half-arguments-and-returns -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir /usr/lib/llvm-11/lib/clang/11.0.1 -dependency-file CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/aarch64-linux-gnu/c++/10 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/aarch64-linux-gnu/c++/10 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10/backward -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-11/lib/clang/11.0.1/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-KD89P9 -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -o CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 11.0.1 based upon LLVM 11.0.1 default target aarch64-unknown-linux-gnu
+        ignoring nonexistent directory "/include"
+        ignoring duplicate directory "/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/aarch64-linux-gnu/c++/10"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10
+         /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/aarch64-linux-gnu/c++/10
+         /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10/backward
+         /usr/local/include
+         /usr/lib/llvm-11/lib/clang/11.0.1/include
+         /usr/include/aarch64-linux-gnu
+         /usr/include
+        End of search list.
+        [2/2] : && /usr/bin/clang++-11  -v -Wl,-v  -rdynamic CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_fcb58   && :
+        Debian clang version 11.0.1-2
+        Target: aarch64-unknown-linux-gnu
+        Thread model: posix
+        InstalledDir: /usr/bin
+        Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10
+        Found candidate GCC installation: /usr/lib/gcc/aarch64-linux-gnu/10
+        Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10
+        Candidate multilib: .;@m64
+        Selected multilib: .;@m64
+         "/usr/bin/ld" -export-dynamic -EL --hash-style=both --build-id --eh-frame-hdr -m aarch64linux -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_fcb58 /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crt1.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtbegin.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10 -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../.. -L/usr/lib/llvm-11/bin/../lib -L/lib -L/usr/lib -v CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtend.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Debian) 2.35.2
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:137 (message)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10]
+          add: [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/aarch64-linux-gnu/c++/10]
+          add: [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10/backward]
+          add: [/usr/local/include]
+          add: [/usr/lib/llvm-11/lib/clang/11.0.1/include]
+          add: [/usr/include/aarch64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10] ==> [/usr/include/c++/10]
+        collapse include dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/aarch64-linux-gnu/c++/10] ==> [/usr/include/aarch64-linux-gnu/c++/10]
+        collapse include dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10/backward] ==> [/usr/include/c++/10/backward]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/lib/llvm-11/lib/clang/11.0.1/include] ==> [/usr/lib/llvm-11/lib/clang/11.0.1/include]
+        collapse include dir [/usr/include/aarch64-linux-gnu] ==> [/usr/include/aarch64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/include/c++/10;/usr/include/aarch64-linux-gnu/c++/10;/usr/include/c++/10/backward;/usr/local/include;/usr/lib/llvm-11/lib/clang/11.0.1/include;/usr/include/aarch64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:173 (message)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-KD89P9']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/ninja -v cmTC_fcb58]
+        ignore line: [[1/2] /usr/bin/clang++-11   -v -MD -MT CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -c /home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Debian clang version 11.0.1-2]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        ignore line: [ (in-process)]
+        ignore line: [ "/usr/lib/llvm-11/bin/clang" -cc1 -triple aarch64-unknown-linux-gnu -emit-obj -mrelax-all -disable-free -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model static -mframe-pointer=non-leaf -fmath-errno -fno-rounding-math -mconstructor-aliases -target-cpu generic -target-feature +neon -target-abi aapcs -fallow-half-arguments-and-returns -fno-split-dwarf-inlining -debugger-tuning=gdb -v -resource-dir /usr/lib/llvm-11/lib/clang/11.0.1 -dependency-file CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/aarch64-linux-gnu/c++/10 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/aarch64-linux-gnu/c++/10 -internal-isystem /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10/backward -internal-isystem /usr/local/include -internal-isystem /usr/lib/llvm-11/lib/clang/11.0.1/include -internal-externc-isystem /usr/include/aarch64-linux-gnu -internal-externc-isystem /include -internal-externc-isystem /usr/include -fdeprecated-macro -fdebug-compilation-dir /home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-KD89P9 -ferror-limit 19 -fno-signed-char -fgnuc-version=4.2.1 -fcxx-exceptions -fexceptions -faddrsig -o CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -x c++ /home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 11.0.1 based upon LLVM 11.0.1 default target aarch64-unknown-linux-gnu]
+        ignore line: [ignoring nonexistent directory "/include"]
+        ignore line: [ignoring duplicate directory "/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/aarch64-linux-gnu/c++/10"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10]
+        ignore line: [ /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/aarch64-linux-gnu/c++/10]
+        ignore line: [ /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../../include/c++/10/backward]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/lib/llvm-11/lib/clang/11.0.1/include]
+        ignore line: [ /usr/include/aarch64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [[2/2] : && /usr/bin/clang++-11  -v -Wl -v  -rdynamic CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_fcb58   && :]
+        ignore line: [Debian clang version 11.0.1-2]
+        ignore line: [Target: aarch64-unknown-linux-gnu]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /usr/bin]
+        ignore line: [Found candidate GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Found candidate GCC installation: /usr/lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Selected GCC installation: /usr/bin/../lib/gcc/aarch64-linux-gnu/10]
+        ignore line: [Candidate multilib: .]
+        ignore line: [@m64]
+        ignore line: [Selected multilib: .]
+        ignore line: [@m64]
+        link line: [ "/usr/bin/ld" -export-dynamic -EL --hash-style=both --build-id --eh-frame-hdr -m aarch64linux -export-dynamic -dynamic-linker /lib/ld-linux-aarch64.so.1 -o cmTC_fcb58 /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crt1.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtbegin.o -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10 -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu -L/lib/aarch64-linux-gnu -L/usr/lib/aarch64-linux-gnu -L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../.. -L/usr/lib/llvm-11/bin/../lib -L/lib -L/usr/lib -v CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtend.o /usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o]
+          arg [/usr/bin/ld] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-EL] ==> ignore
+          arg [--hash-style=both] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [aarch64linux] ==> ignore
+          arg [-export-dynamic] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib/ld-linux-aarch64.so.1] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_fcb58] ==> ignore
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crt1.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crt1.o]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtbegin.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtbegin.o]
+          arg [-L/usr/bin/../lib/gcc/aarch64-linux-gnu/10] ==> dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10]
+          arg [-L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu] ==> dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu]
+          arg [-L/lib/aarch64-linux-gnu] ==> dir [/lib/aarch64-linux-gnu]
+          arg [-L/usr/lib/aarch64-linux-gnu] ==> dir [/usr/lib/aarch64-linux-gnu]
+          arg [-L/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../..] ==> dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../..]
+          arg [-L/usr/lib/llvm-11/bin/../lib] ==> dir [/usr/lib/llvm-11/bin/../lib]
+          arg [-L/lib] ==> dir [/lib]
+          arg [-L/usr/lib] ==> dir [/usr/lib]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_fcb58.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtend.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtend.o]
+          arg [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o] ==> obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o]
+        linker tool for 'CXX': /usr/bin/ld
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crt1.o] ==> [/usr/lib/aarch64-linux-gnu/crt1.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crti.o] ==> [/usr/lib/aarch64-linux-gnu/crti.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtbegin.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/10/crtbegin.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/crtend.o] ==> [/usr/lib/gcc/aarch64-linux-gnu/10/crtend.o]
+        collapse obj [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu/crtn.o] ==> [/usr/lib/aarch64-linux-gnu/crtn.o]
+        collapse library dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10] ==> [/usr/lib/gcc/aarch64-linux-gnu/10]
+        collapse library dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../../aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+        collapse library dir [/lib/aarch64-linux-gnu] ==> [/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/lib/aarch64-linux-gnu] ==> [/usr/lib/aarch64-linux-gnu]
+        collapse library dir [/usr/bin/../lib/gcc/aarch64-linux-gnu/10/../../..] ==> [/usr/lib]
+        collapse library dir [/usr/lib/llvm-11/bin/../lib] ==> [/usr/lib/llvm-11/lib]
+        collapse library dir [/lib] ==> [/lib]
+        collapse library dir [/usr/lib] ==> [/usr/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/usr/lib/aarch64-linux-gnu/crt1.o;/usr/lib/aarch64-linux-gnu/crti.o;/usr/lib/gcc/aarch64-linux-gnu/10/crtbegin.o;/usr/lib/gcc/aarch64-linux-gnu/10/crtend.o;/usr/lib/aarch64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/aarch64-linux-gnu/10;/usr/lib/aarch64-linux-gnu;/lib/aarch64-linux-gnu;/usr/lib;/usr/lib/llvm-11/lib;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:210 (cmake_determine_linker_id)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Running the CXX compiler's linker: "/usr/bin/ld" "-v"
+      GNU ld (GNU Binutils for Debian) 2.35.2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/usr/local/lib/python3.9/dist-packages/torch/share/cmake/Caffe2/public/threads.cmake:5 (find_package)"
+      - "/usr/local/lib/python3.9/dist-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:17 (include)"
+      - "/usr/local/lib/python3.9/dist-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:4 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-0qAEAm"
+      binary: "/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-0qAEAm"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-0qAEAm'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_08fac
+        [1/2] /usr/bin/clang-11 -DCMAKE_HAVE_LIBC_PTHREAD   -MD -MT CMakeFiles/cmTC_08fac.dir/src.c.o -MF CMakeFiles/cmTC_08fac.dir/src.c.o.d -o CMakeFiles/cmTC_08fac.dir/src.c.o -c /home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-0qAEAm/src.c
+        [2/2] : && /usr/bin/clang-11  -rdynamic CMakeFiles/cmTC_08fac.dir/src.c.o -o cmTC_08fac   && :
+        FAILED: cmTC_08fac 
+        : && /usr/bin/clang-11  -rdynamic CMakeFiles/cmTC_08fac.dir/src.c.o -o cmTC_08fac   && :
+        /usr/bin/ld: CMakeFiles/cmTC_08fac.dir/src.c.o: in function `main':
+        src.c:(.text+0x2c): undefined reference to `pthread_create'
+        /usr/bin/ld: src.c:(.text+0x38): undefined reference to `pthread_detach'
+        /usr/bin/ld: src.c:(.text+0x44): undefined reference to `pthread_cancel'
+        /usr/bin/ld: src.c:(.text+0x54): undefined reference to `pthread_join'
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/FindThreads.cmake:175 (_threads_check_lib)"
+      - "/usr/local/lib/python3.9/dist-packages/torch/share/cmake/Caffe2/public/threads.cmake:5 (find_package)"
+      - "/usr/local/lib/python3.9/dist-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:17 (include)"
+      - "/usr/local/lib/python3.9/dist-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:4 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthreads"
+    directories:
+      source: "/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-S3Mj5n"
+      binary: "/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-S3Mj5n"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREADS_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-S3Mj5n'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_7157f
+        [1/2] /usr/bin/clang-11   -DCHECK_FUNCTION_EXISTS=pthread_create -MD -MT CMakeFiles/cmTC_7157f.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_7157f.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_7157f.dir/CheckFunctionExists.c.o -c /home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-S3Mj5n/CheckFunctionExists.c
+        [2/2] : && /usr/bin/clang-11 -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_7157f.dir/CheckFunctionExists.c.o -o cmTC_7157f  -lpthreads && :
+        FAILED: cmTC_7157f 
+        : && /usr/bin/clang-11 -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_7157f.dir/CheckFunctionExists.c.o -o cmTC_7157f  -lpthreads && :
+        /usr/bin/ld: cannot find -lpthreads
+        clang: error: linker command failed with exit code 1 (use -v to see invocation)
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/FindThreads.cmake:112 (CHECK_LIBRARY_EXISTS)"
+      - "/home/Anas2193/.local/lib/python3.9/site-packages/cmake/data/share/cmake-3.29/Modules/FindThreads.cmake:176 (_threads_check_lib)"
+      - "/usr/local/lib/python3.9/dist-packages/torch/share/cmake/Caffe2/public/threads.cmake:5 (find_package)"
+      - "/usr/local/lib/python3.9/dist-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:17 (include)"
+      - "/usr/local/lib/python3.9/dist-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:4 (find_package)"
+    checks:
+      - "Looking for pthread_create in pthread"
+    directories:
+      source: "/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-mwKrbm"
+      binary: "/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-mwKrbm"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_HAVE_PTHREAD_CREATE"
+      cached: true
+      stdout: |
+        Change Dir: '/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-mwKrbm'
+        
+        Run Build Command(s): /usr/bin/ninja -v cmTC_a2b1d
+        [1/2] /usr/bin/clang-11   -DCHECK_FUNCTION_EXISTS=pthread_create -MD -MT CMakeFiles/cmTC_a2b1d.dir/CheckFunctionExists.c.o -MF CMakeFiles/cmTC_a2b1d.dir/CheckFunctionExists.c.o.d -o CMakeFiles/cmTC_a2b1d.dir/CheckFunctionExists.c.o -c /home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/CMakeScratch/TryCompile-mwKrbm/CheckFunctionExists.c
+        [2/2] : && /usr/bin/clang-11 -DCHECK_FUNCTION_EXISTS=pthread_create -rdynamic CMakeFiles/cmTC_a2b1d.dir/CheckFunctionExists.c.o -o cmTC_a2b1d  -lpthread && :
+        
+      exitCode: 0
+...

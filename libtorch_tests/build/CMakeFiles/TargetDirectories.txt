@@ -1,0 +1,3 @@
+/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/main.dir
+/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/edit_cache.dir
+/home/Anas2193/green_computing_benchmark/libtorch_tests/build/CMakeFiles/rebuild_cache.dir

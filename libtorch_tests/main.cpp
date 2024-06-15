@@ -25,13 +25,13 @@ void terminateProcess(const char* processName) {
 const char* kDataRoot = MNIST_FASHION_DATA_LOCATION;
 
 // The batch size for training.
-const int64_t kTrainBatchSize = 64;
+const int64_t kTrainBatchSize = 4;
 
 // The batch size for testing.
-const int64_t kTestBatchSize = 1000;
+const int64_t kTestBatchSize = 4;
 
 // The number of epochs to train.
-const int64_t kNumberOfEpochs = 50;
+const int64_t kNumberOfEpochs = 10;
 
 // After how many batches to log a new update with the loss value.
 const int64_t kLogInterval = 10;
